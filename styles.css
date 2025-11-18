@@ -1,0 +1,290 @@
+/* Reset-ish */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background-color: #f4f5fb;
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+.center {
+  text-align: center;
+}
+
+/* Header & nav */
+header {
+  background: #0f172a;
+  color: #f9fafb;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* the logo container */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* the logo image itself */
+.logo img {
+  height: 40px;   /* change this number to make it bigger/smaller */
+  width: auto;
+  display: block;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+/* HERO (home page) */
+.hero {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 24px 16px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.9rem, 2.6vw + 1rem, 2.6rem);
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.hero-text p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.25);
+  object-fit: cover;
+}
+
+/* Section titles */
+h2.center {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+  color: #111827;
+}
+
+/* PROGRAMS / COURSES GRID */
+.programs {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 16px 32px;
+}
+
+.programs > h2 {
+  margin-bottom: 24px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 16px 20px;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.course-card ul {
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.course-card li + li {
+  margin-top: 4px;
+}
+
+/* ABOUT PAGE */
+.about-hero {
+  max-width: 1100px;
+  margin: 32px auto 40px;
+  padding: 24px 16px 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.about-box h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.about-box p + p {
+  margin-top: 10px;
+}
+
+.about-box p {
+  color: #4b5563;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.25);
+  object-fit: cover;
+}
+
+/* BIO PAGE */
+.bio-section {
+  max-width: 900px;
+  margin: 32px auto 40px;
+  padding: 24px 16px 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.bio-section h1 {
+  font-size: 1.9rem;
+  margin-bottom: 16px;
+}
+
+.bio-section p {
+  margin-bottom: 12px;
+  color: #4b5563;
+}
+
+.contact-info {
+  margin-top: 8px;
+  font-size: 1.05rem;   /* was 0.95rem – just a bit bigger */
+  line-height: 1.7;
+}
+
+.contact-info a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.bio-section img {
+  max-width: 180px;  /* try 180–260px until it feels right */
+  height: auto;
+  display: block;
+  border-radius: 12px; /* optional: soften the corners */
+}
+
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px 16px 24px;
+  background: #0f172a;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  margin-top: 24px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .menu {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hero,
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    text-align: left;
+  }
+
+  .hero-image,
+  .about-image {
+    order: -1; /* images first on mobile (optional – remove if you prefer text first) */
+  }
+
+  .bio-section {
+    margin-top: 24px;
+  }
+
+}
